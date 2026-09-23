@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  color: white;
+  font-size: x-large;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* From Uiverse.io by ish7o */
+body {
+  background-image: url(./images/porfolio\ bg.jpg);
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  margin-bottom: 35px;
+}
+.nav__lists {
+  display: flex;
+  gap: 30px;
+}
+.hero__h1 {
+  padding-bottom: 20px;
+}
+.hero__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero__img {
+  width: 350px;
+  height: 400px;
+  border-radius: 50px;
+  margin-right: 100px;
+}
+.h1-card {
+  display: block;
+  margin-left: 100px;
+}
+.hero-h1 {
+  padding-bottom: 30px;
+}
+.hero__wrapper {
+  margin-top: 70px;
+}
+.hero__btn {
+  color: white;
+  background: none;
+  padding: 24px 30px;
+  border: 2px solid white;
+  border-radius: 24px;
+}
+.hero__button {
+  color: white;
+  background: none;
+  padding: 24px 30px;
+  border: 2px solid white;
+  border-radius: 24px;
+}
+.hero__title {
+  padding-bottom: 30px;
+}
+.marquee-konteyner {
+  overflow: hidden;
+  width: 100%;
+  background-color: #0b1120;
+  padding: 30px 0; /* ⬅️ Chiziq balandligini kattalashtirdik (15px edi) */
+  display: flex;
+}
+
+.marquee-harakat {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  justify-content: space-around;
+  /* Animatsiya: matn kattalashgani uchun tez ko'rinmasligi uchun 25s qildim */
+  animation: uzluksizHarakat 25s linear infinite;
+}
+
+.marquee-harakat span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 36px; /* ⬅️ Harflar o'lchamini sezilarli kattalashtirdik (20px edi) */
+  font-weight: 900; /* ⬅️ Yozuvni yanada qalinroq va yaqqol qildik */
+  color: #00f0ff;
+  padding: 0 45px; /* ⬅️ Yozuvlar orasidagi masofani ham mos ravishda ochdik */
+  white-space: nowrap;
+  letter-spacing: 1px; /* Harflar bir-biriga yopishib ketmasligi uchun ozgina masofa */
+}
+
+/* Harakat mantig'i zanjirsimon va bo'shliqlarsiz qoladi */
+@keyframes uzluksizHarakat {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.hero {
+  margin-bottom: 70px;
+}
+.about-mini {
+  width: 60px;
+  height: 35px;
+  background: rgba(255, 0, 0, 0.251);
+  border-radius: 12px;
+}
+.about-card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.abouth3 {
+  text-align: center;
+}
+.about__img {
+  width: 425px;
+  height: 500px;
+  border-radius: 50px;
+}
+span {
+  color: red;
+  font-size: larger;
+  font-weight: 800;
+}
+.about__main {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+.about__wrapper {
+  margin-left: 100px;
+}
+.logos {
+  padding-bottom: 30px;
+}
+.logo-p {
+  padding-bottom: 30px;
+}
+.hydra-img {
+  width: 425px;
+  height: 260px;
+  border-radius: 30px;
+}
+.hydra-card {
+  background: linear-gradient(to right, rgb(198, 198, 2), rgb(251, 4, 209));
+  width: 900px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 30px;
+  margin-left: 265px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.hydra-mini {
+  background-color: #ffffff56;
+  border-radius: 24px;
+  justify-content: center;
+  width: 400px;
+  height: 220px;
+}
+.hydra-title {
+  padding-bottom: 24px;
+  padding-left: 12px;
+}
+.hydra-btn {
+  padding: 17px 25px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(96, 2, 96);
+  color: white;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: medium;
+}
+.hydra-h3 {
+  margin-top: 36px;
+  padding-left: 12px;
+  padding-bottom: 24px;
+}
+.project__wrapper {
+  padding-top: 100px;
+}
+.h1--card {
+  width: 1200px;
+  background-color: #490202;
+  border: 1px solid white;
+  border-radius: 50px;
+  height: 65px;
+  margin-bottom: 70px;
+
+  text-align: center;
+}
+.build-img {
+  width: 425px;
+  height: 260px;
+  border-radius: 30px;
+}
+.build-mini {
+  background-color: #ffffff56;
+  border-radius: 24px;
+  justify-content: center;
+  width: 400px;
+  height: 220px;
+}
+.build-card {
+  background: linear-gradient(to right, purple, rgb(255, 0, 0));
+  width: 900px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 30px;
+  margin-left: 265px;
+  justify-content: center;
+}
+.build-h3 {
+  margin-top: 36px;
+  padding-left: 12px;
+  padding-bottom: 24px;
+}
+.build-btn {
+  padding: 17px 25px;
+  border-radius: 12px;
+  border: none;
+  background-color: gold;
+  color: white;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: medium;
+}
+.build-title {
+  padding-bottom: 24px;
+  padding-left: 12px;
+}
+.club-img {
+  width: 350px;
+  height: 400px;
+  border-radius: 50px;
+}
+.club {
+  padding-top: 100px;
+}
+.clubh3 {
+  text-align: center;
+}
+.club-card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  padding-left: 90px;
+}
+
+.club-mini {
+  width: 60px;
+  height: 35px;
+  background: rgba(255, 0, 0, 0.251);
+  border-radius: 12px;
+}
+.club-imgs {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  padding-top: 24px;
+}
+.club__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 130px;
+}
+.club-h1 {
+  padding-bottom: 24px;
+}
+.footer-img {
+  width: 50px;
+  height: 50px;
+ 
+  border-radius: 50px;
+}
