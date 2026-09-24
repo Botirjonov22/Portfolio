@@ -13,17 +13,17 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="container">
         <nav class="nav">
           <div class="nav__wrapper">
             <h1>DOVUDBEK</h1>
             <ul class="nav__lists">
               <li><a href="#about">01. Men haqimda</a></li>
+              a
               <li><a href="#loyhalarim">02. Loyhalarim</a></li>
               <li><a href="#club">03. Futbol jamoam</a></li>
-              <li><a href="">04. IT Guruhim</a></li>
-              <li><a href="">05. Aloqa</a></li>
+              <li><a href="#footer">05. Bog'lanish </a></li>
             </ul>
           </div>
         </nav>
@@ -41,23 +41,21 @@
                 va dasturlashni sevaman
               </p>
               <div class="btn-card">
-                <button class="hero__button">Meni Tanish</button>
-                <button class="hero__btn">Loyihalarim</button>
+                <a href="#about"
+                  ><button class="hero__button">Meni Tanish</button></a
+                >
+                <a href="#loyhalarim"
+                  ><button class="hero__btn">Loyihalarim</button></a
+                >
               </div>
             </div>
-            <!-- <p class="hero__title">
-          Men 13 yoshman. 161 maktab 7"V"sinfda oqiman. <br />
-          Men Futbol, IT va Formula 1 ga qiziqaman. Hozir men <br />
-          PDP-juniorda dasturlashni organayapman. Kelajakda Futbolchi <br />
-          bolmoqchiman. Hayr tanishganimdan hursandman
-        </p> -->
+
             <img class="hero__img" src="./images/portfolio.jpg" alt="" />
           </div>
         </div>
       </div>
     </section>
     <div class="marquee-konteyner">
-      <!-- Birinchi blok (Matnlar majmuasi) -->
       <div class="marquee-harakat">
         <span
           >FRONTEND HTML CSS JAVASCRIPT KELAJAK DASTURCHI VA PROFFESIONAL
@@ -77,7 +75,6 @@
         >
       </div>
 
-      <!-- Ikkinchi blok (Birinchisi tugashi bilan o'rnini to'ldiruvchi nusxa) -->
       <div class="marquee-harakat" aria-hidden="true">
         <span
           >FRONTEND HTML CSS JAVASCRIPT KELAJAK DASTURCHI VA PROFFESIONAL
@@ -196,26 +193,50 @@
     <section class="it">
       <div class="container">
         <div class="it__wrapper">
-          <div class="it__main">
-
-          </div>
+          <div class="it__main"></div>
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer__main">
-            <h1>Men, bilan <span>bog'laning</span></h1>
+            <div class="footer-texts">
+              <h1>Xayr!</h1>
+              <h2 class="kkk"><span class="">Yana ko'rishguncha</span></h2>
+              <h3>
+                Vaqtingizni ajratib, mening portfolioimni <br />
+                ko'rganingiz uchun rahmat. Agar sizga mening <br />
+                ishlarim yoqqan bo'lsa, men bilan bog'lanishingiz mumkin.
+              </h3>
+            </div>
             <div class="footer-card">
-              <span>+998.88.003.83.80</span>
-              <div class="footer-logo">
-                <div class="footer-mini">
-                  <img class="footer-img" src="./images/insta.webp" alt="">
-                </div>
-              </div>
+              <h3 class="rrr">
+                <h1 class="ggg"><span>Bog'lanish</span></h1>
+                <a href="mailto:botirjonovdovudbek22@gmail.com"
+                  ><span>Email: <br /></span>botirjonovdovudbek22@gmail.com</a
+                >
+              </h3>
+              <h3 class="rrr">
+                <a
+                  href="https://www.instagram.com/botirjonov_10?stkn=b2VwODhlY2F2NGFu"
+                  ><span class="span">Instagram </span></a
+                >
+              </h3>
+              <h3 class="rrr">
+                <a href="https://github.com/Botirjonov22" target="_blank">
+                  <span>Github</span>
+                </a>
+              </h3>
             </div>
           </div>
+          <ul class="nav__list">
+            <li><a href="#about">01. Men haqimda</a></li>
+            <li><a href="#loyhalarim">02. Loyhalarim</a></li>
+            <li><a href="#club">03. Futbol jamoam</a></li>
+            <li><a href="#footer">05. Bog'lanish </a></li>
+          </ul>
+          <h3 class="ppp">© 2026-Dovudbek Made with love and code</h3>
         </div>
       </div>
     </footer>

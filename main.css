@@ -86,7 +86,7 @@ body {
   overflow: hidden;
   width: 100%;
   background-color: #0b1120;
-  padding: 30px 0; /* ⬅️ Chiziq balandligini kattalashtirdik (15px edi) */
+  padding: 30px 0;
   display: flex;
 }
 
@@ -95,21 +95,20 @@ body {
   flex-shrink: 0;
   min-width: 100%;
   justify-content: space-around;
-  /* Animatsiya: matn kattalashgani uchun tez ko'rinmasligi uchun 25s qildim */
+
   animation: uzluksizHarakat 25s linear infinite;
 }
 
 .marquee-harakat span {
   font-family: "Courier New", Courier, monospace;
-  font-size: 36px; /* ⬅️ Harflar o'lchamini sezilarli kattalashtirdik (20px edi) */
-  font-weight: 900; /* ⬅️ Yozuvni yanada qalinroq va yaqqol qildik */
+  font-size: 36px;
+  font-weight: 900;
   color: #00f0ff;
-  padding: 0 45px; /* ⬅️ Yozuvlar orasidagi masofani ham mos ravishda ochdik */
+  padding: 0 45px;
   white-space: nowrap;
-  letter-spacing: 1px; /* Harflar bir-biriga yopishib ketmasligi uchun ozgina masofa */
+  letter-spacing: 1px;
 }
 
-/* Harakat mantig'i zanjirsimon va bo'shliqlarsiz qoladi */
 @keyframes uzluksizHarakat {
   0% {
     transform: translateX(0%);
@@ -305,6 +304,50 @@ span {
 .footer-img {
   width: 50px;
   height: 50px;
- 
+
   border-radius: 50px;
+}
+.footer-card {
+  display: block;
+  padding-top: 50px;
+}
+.footer__wrapper {
+  background-color: #040131;
+  border-radius: 50px;
+  margin-top: 100px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+.footer__main {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.footer-texts {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.rrr {
+  padding-bottom: 18px;
+}
+.nav__list {
+  padding-top: 50px;
+  display: flex;
+  gap: 50px;
+  padding-left: 300px;
+}
+.kkk {
+  padding-bottom: 18px;
+}
+.ggg {
+  padding-bottom: 18px;
+}
+.ppp {
+  padding-left: 430px;
+  padding-top: 50px;
+}
+.span {
+  color: red;
+  font-size: larger;
+  font-weight: 800;
 }
