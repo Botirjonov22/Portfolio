@@ -41,6 +41,36 @@ body {
   display: flex;
   gap: 30px;
 }
+
+/* ---- Hover: nav links ---- */
+.nav__lists a,
+.nav__list a {
+  position: relative;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.nav__lists a::after,
+.nav__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #00f0ff;
+  transition: width 0.3s ease;
+}
+.nav__lists a:hover,
+.nav__list a:hover {
+  color: #00f0ff;
+  transform: translateY(-2px);
+}
+.nav__lists a:hover::after,
+.nav__list a:hover::after {
+  width: 100%;
+}
+
 .hero__h1 {
   padding-bottom: 20px;
 }
@@ -54,6 +84,13 @@ body {
   height: 400px;
   border-radius: 50px;
   margin-right: 100px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.hero__img:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0, 240, 255, 0.25);
 }
 .h1-card {
   display: block;
@@ -65,6 +102,31 @@ body {
 .hero__wrapper {
   margin-top: 70px;
 }
+
+/* ---- Hover: buttons (shared) ---- */
+.hero__btn,
+.hero__button,
+.hydra-btn,
+.build-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+  cursor: pointer;
+}
+.hero__btn:hover,
+.hero__button:hover {
+  background-color: white;
+  color: #0b1120;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+.hero__btn:active,
+.hero__button:active {
+  transform: translateY(-1px);
+}
+
 .hero__btn {
   color: white;
   background: none;
@@ -125,6 +187,13 @@ body {
   height: 35px;
   background: rgba(255, 0, 0, 0.251);
   border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+.about-mini:hover {
+  transform: scale(1.1);
+  background: rgba(255, 0, 0, 0.4);
 }
 .about-card {
   display: flex;
@@ -140,6 +209,13 @@ body {
   width: 425px;
   height: 500px;
   border-radius: 50px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.about__img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.2);
 }
 span {
   color: red;
@@ -164,6 +240,10 @@ span {
   width: 425px;
   height: 260px;
   border-radius: 30px;
+  transition: transform 0.4s ease;
+}
+.hydra-img:hover {
+  transform: scale(1.05);
 }
 .hydra-card {
   background: linear-gradient(to right, rgb(198, 198, 2), rgb(251, 4, 209));
@@ -176,6 +256,13 @@ span {
   margin-left: 265px;
   justify-content: center;
   margin-bottom: 70px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.hydra-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
 }
 .hydra-mini {
   background-color: #ffffff56;
@@ -199,6 +286,11 @@ span {
   font-weight: 900;
   font-size: medium;
 }
+.hydra-btn:hover {
+  background-color: rgb(140, 3, 140);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(96, 2, 96, 0.5);
+}
 .hydra-h3 {
   margin-top: 36px;
   padding-left: 12px;
@@ -216,11 +308,19 @@ span {
   margin-bottom: 70px;
 
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+.h1--card:hover {
+  background-color: #6e0303;
 }
 .build-img {
   width: 425px;
   height: 260px;
   border-radius: 30px;
+  transition: transform 0.4s ease;
+}
+.build-img:hover {
+  transform: scale(1.05);
 }
 .build-mini {
   background-color: #ffffff56;
@@ -239,6 +339,13 @@ span {
   border-radius: 30px;
   margin-left: 265px;
   justify-content: center;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.build-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
 }
 .build-h3 {
   margin-top: 36px;
@@ -256,6 +363,12 @@ span {
   font-weight: 900;
   font-size: medium;
 }
+.build-btn:hover {
+  background-color: #ffe14d;
+  color: #490202;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+}
 .build-title {
   padding-bottom: 24px;
   padding-left: 12px;
@@ -264,6 +377,13 @@ span {
   width: 350px;
   height: 400px;
   border-radius: 50px;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.club-img:hover {
+  transform: scale(1.04) rotate(1deg);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
 }
 .club {
   padding-top: 100px;
@@ -285,12 +405,25 @@ span {
   height: 35px;
   background: rgba(255, 0, 0, 0.251);
   border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+.club-mini:hover {
+  transform: scale(1.1);
+  background: rgba(255, 0, 0, 0.4);
 }
 .club-imgs {
   align-items: center;
   display: flex;
   gap: 15px;
   padding-top: 24px;
+}
+.club-imgs img {
+  transition: transform 0.3s ease;
+}
+.club-imgs img:hover {
+  transform: translateY(-6px) scale(1.08);
 }
 .club__main {
   display: flex;
@@ -306,13 +439,17 @@ span {
   height: 50px;
 
   border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+.footer-img:hover {
+  transform: scale(1.15) rotate(8deg);
 }
 .footer-card {
   display: block;
   padding-top: 50px;
 }
 .footer__wrapper {
-  background-color: #040131;
+  background-color: #04013161;
   border-radius: 50px;
   margin-top: 100px;
   height: 500px;
@@ -350,4 +487,168 @@ span {
   color: red;
   font-size: larger;
   font-weight: 800;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   Add class="reveal" (or reveal-left / reveal-right)
+   to any section/card in your HTML. The JS below
+   (scroll-reveal.js) toggles ".is-visible" as each
+   element enters the viewport.
+   ============================================ */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  will-change: opacity, transform;
+}
+.reveal {
+  transform: translateY(60px);
+}
+.reveal-left {
+  transform: translateX(-80px);
+}
+.reveal-right {
+  transform: translateX(80px);
+}
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+.gx {
+  --gx-accent: #4c8dff;
+  --gx-gap: 20px;
+  --gx-radius: 14px;
+  background: none;
+  padding: clamp(32px, 6vw, 72px) 0;
+}
+
+.gx__track {
+  display: flex;
+  gap: var(--gx-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 max(24px, calc((100% - 1200px) / 2 + 24px));
+  scroll-padding: 0 max(24px, calc((100% - 1200px) / 2 + 24px));
+  scrollbar-width: none;
+}
+.gx__track::-webkit-scrollbar {
+  display: none;
+}
+.gx__track:focus-visible,
+.gx__dot:focus-visible {
+  outline: 2px solid var(--gx-accent);
+  outline-offset: 3px;
+}
+
+.gx__slide {
+  position: relative;
+  flex: 0 0 calc((min(100vw, 1200px) - 48px - 2 * var(--gx-gap)) / 3);
+  aspect-ratio: 3 / 4;
+  scroll-snap-align: start;
+  border-radius: var(--gx-radius);
+  overflow: hidden;
+  margin: 0;
+  background: none;
+}
+.gx__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gx__slide:hover img {
+  transform: scale(1.04);
+}
+
+.gx__slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 48px 18px 16px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+@media (max-width: 900px) {
+  .gx__slide {
+    flex-basis: calc((100vw - 48px - var(--gx-gap)) / 2);
+  }
+}
+@media (max-width: 560px) {
+  .gx__slide {
+    flex-basis: 78vw;
+  }
+}
+
+.gx__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.gx__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+  background: #8b95a3;
+  opacity: 0.6;
+  cursor: pointer;
+  transition:
+    width 0.25s,
+    background 0.25s,
+    opacity 0.25s;
+}
+.gx__dot[aria-current="true"] {
+  width: 26px;
+  border-radius: 6px;
+  background: var(--gx-accent);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gx__track {
+    scroll-behavior: auto;
+  }
+  .gx__slide img {
+    transition: none;
+  }
+}
+.aboutmini {
+  display: flex;
+  margin-left: 125px;
+  width: 60px;
+  height: 35px;
+  background: rgba(255, 0, 0, 0.251);
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+.khkh {
+  
+  padding-left: 125px;
 }
