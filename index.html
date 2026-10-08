@@ -1,44 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hydra VR | Build Your World</title>
+    <title>Dovudbek | Portfolio</title>
     <script>
       document.documentElement.classList.add("js");
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./main.css" />
   </head>
+
   <body>
-    <div class="progress" aria-hidden="true"></div>
-
     <!-- ================= HEADER ================= -->
-    <header id="top">
-      <div class="container">
-        <nav class="nav">
-          <div class="nav__wrapper">
-            <a class="imgs" href="#top" aria-label="Hydra VR">
-              <img src="./images/Frame.png" alt="" />
-              <img src="./images/Frame (1).png" alt="Hydra VR" />
-            </a>
+    <header class="hd" id="header">
+      <div class="wrap hd__bar">
+        <a class="hd__logo" href="#header" aria-label="Dovudbek">
+          <span class="hd__word" aria-hidden="true">
+            <span style="--i: 0">D</span><span style="--i: 1">O</span
+            ><span style="--i: 2">V</span><span style="--i: 3">U</span
+            ><span style="--i: 4">D</span><span style="--i: 5">B</span
+            ><span style="--i: 6">E</span><span style="--i: 7">K</span> </span
+          ><b></b>
+        </a>
 
-            <button class="burger" aria-label="Open menu" aria-expanded="false">
-              <span></span><span></span><span></span>
-            </button>
+        <button
+          class="hd__burger"
+          aria-label="Menyuni ochish"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-            <div class="nav__menu">
-              <ul class="nav__ul">
-                <li class="nav__lists"><a href="#about">ABOUT</a></li>
-                <li class="nav__lists"><a href="#services">SERVICES</a></li>
-                <li class="nav__lists"><a href="#tech">TECHNOLOGIES</a></li>
-                <li class="nav__lists"><a href="#process">HOW TO</a></li>
-              </ul>
-              <div class="btns">
-                <a class="btn1" href="#join">CONTACT US</a>
-                <a class="btn2" href="#join">JOIN HYDRA</a>
-              </div>
-            </div>
-          </div>
+        <nav class="hd__nav" aria-label="Asosiy menyu">
+          <a href="#about">Men haqimda</a>
+          <a href="#loyhalarim">Loyihalarim</a>
+          <a href="#guruh">IT Guruhim</a>
+          <a href="#oilam">Oilam</a>
+          <a href="#footer">Bog'lanish</a>
         </nav>
       </div>
     </header>
@@ -46,292 +50,101 @@
     <main>
       <!-- ================= HERO ================= -->
       <section class="hero">
-        <div class="container">
-          <div class="hero__main">
-            <div class="hero__wrapper">
-              <div class="hero__card reveal reveal--left">
-                <h1 class="title1">Dive Into The Depths</h1>
-                <h1 class="title">Of Virtual Reality</h1>
-                <p class="text">
-                  Hydra VR designs immersive worlds for training, education and
-                  play. Put on a headset and step into spaces built to feel
-                  real, from deep-sea expeditions to fully interactive
-                  classrooms.
-                </p>
-                <div class="btn-img">
-                  <a class="btn" href="#join">BUILD YOUR WORLD</a>
-                  <img src="./images/shape.png" alt="" />
-                </div>
-              </div>
-              <div class="hero__img reveal reveal--right" style="--d: 0.15s">
-                <img
-                  src="./images/Mask group.png"
-                  alt="Person exploring a virtual world"
-                />
-              </div>
+        <div class="wrap hero__grid">
+          <div class="hero__text reveal">
+            <p class="hero__hi">Salom,</p>
+            <h1 class="hero__name">Mening ismim <em>Dovudbek</em></h1>
+            <p class="hero__desc">
+              Yoshim 13da. Futbol oynashni<br />va dasturlashni sevaman.
+            </p>
+            <div class="hero__btns">
+              <a class="btn btn--solid" href="#about">Meni tanish</a>
+              <a class="btn btn--ghost" href="#loyhalarim">Loyihalarim</a>
             </div>
+          </div>
 
-            <div class="hero__cards reveal">
-              <div class="hero__location">
-                <img class="jjj" src="./images/Page-1.png" alt="" />
-                <div class="hero__texts">
-                  <h3 class="ggg">Pay Us a Visit</h3>
-                  <p class="fff">Union St, Seattle, WA 98101, United States</p>
-                </div>
-              </div>
-              <div class="hero__location">
-                <img class="jjj" src="./images/phone-call.png" alt="" />
-                <div class="hero__texts">
-                  <h3 class="ggg">Give Us a Call</h3>
-                  <p class="fff">(110) 1111-1010</p>
-                </div>
-              </div>
-              <div class="hero__location">
-                <img class="jjj" src="./images/mail.png" alt="" />
-                <div class="hero__texts">
-                  <h3 class="ggg">Send Us a Message</h3>
-                  <p class="fff">Contact@HydraVTech.com</p>
-                </div>
-              </div>
-            </div>
+          <div class="hero__photo reveal" style="--d: 0.2s">
+            <img src="./images/portfolio.jpg" alt="Dovudbek" />
           </div>
         </div>
       </section>
+
+      <!-- ================= MARQUEE ================= -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+          </div>
+          <div class="marquee__group">
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+            <span
+              >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
+            >
+          </div>
+        </div>
+      </div>
 
       <!-- ================= ABOUT ================= -->
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about__wrapper">
-            <div class="about__main">
-              <div class="about__card reveal">
-                <h1 class="h1">INTRODUCTION!</h1>
-                <div class="about__h2">
-                  <h2 class="h2">TO HYDRA VR</h2>
-                  <img src="./images/Component 1.svg" alt="" />
+      <section class="sec about" id="about">
+        <div class="wrap">
+          <h2 class="sec__title reveal"><i></i>Men haqimda</h2>
+
+          <div class="about__grid">
+            <div class="about__photo reveal">
+              <img src="./images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
+            </div>
+
+            <div class="about__info">
+              <p class="about__text reveal">
+                Salom! Ismim <b>Dovudbek</b>, 161-maktabda 7-"V" sinf
+                o'quvchisiman. PDP Juniorda <b>3 oydan beri</b> dasturlashni
+                o'rganaman va <b>5 yildan beri futbol</b> bilan shug'ullanaman.
+                Kelajakda dasturchi va futbolchi bo'lishni orzu qilaman.
+              </p>
+
+              <div class="facts">
+                <div class="fact reveal" style="--d: 0.05s">
+                  <span class="fact__ico">🎂</span>
+                  <div><small>Tug'ilgan sana</small>17.06.2013</div>
                 </div>
-              </div>
-              <div class="about__title reveal" style="--d: 0.15s">
-                <p class="p">
-                  Hydra VR is a studio that builds virtual reality experiences
-                  for businesses, schools and creators. We combine 3D design,
-                  interaction design and real-time engineering so every world
-                  feels natural to explore from the very first minute.
-                </p>
-              </div>
-            </div>
-
-            <div class="about__hydra">
-              <div class="img reveal reveal--left">
-                <img src="./images/Mask group (2).png" alt="Hydra VR headset" />
-              </div>
-              <div class="hydra-vr reveal reveal--right" style="--d: 0.15s">
-                <h1 class="text__about">ABOUT</h1>
-                <h2 class="title-hydra">HYDRA VR</h2>
-                <p class="title2">
-                  We started with a simple idea: virtual reality should be
-                  useful, not just impressive. Our team of 3D artists, designers
-                  and developers turns real needs into worlds you can walk
-                  through, touch and learn from.
-                </p>
-                <p class="title2">
-                  Whether it is a safety drill, a history lesson or a calm
-                  corner to unwind in, every project follows the same path:
-                  listen, prototype, test with real people and refine until it
-                  feels right.
-                </p>
-                <a class="btn" href="#join">LET’S GET IN TOUCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SERVICES ================= -->
-      <section class="build" id="services">
-        <div class="container">
-          <div class="build__wrapper">
-            <div class="about__main">
-              <div class="about__card reveal">
-                <h1 class="h1">WHY BUILD</h1>
-                <div class="about__h2">
-                  <h2 class="h2">WITH HYDRA?</h2>
-                  <img src="./images/Component 1.svg" alt="" />
+                <div class="fact reveal" style="--d: 0.1s">
+                  <span class="fact__ico">🏫</span>
+                  <div><small>Maktabim</small>161-maktab, 7-"V" sinf</div>
                 </div>
-              </div>
-              <div class="about__title reveal" style="--d: 0.15s">
-                <p class="p">
-                  One team handles everything: concept, 3D art, interaction,
-                  testing and launch. You get a polished experience that runs
-                  smoothly on modern headsets, with clear timelines and support
-                  after release.
-                </p>
-              </div>
-            </div>
-
-            <div class="build__main">
-              <div class="build__cards reveal" style="--d: 0s">
-                <img
-                  class="build__img"
-                  src="./images/Mask group (3).png"
-                  alt=""
-                />
-                <h3 class="build__title">SIMULATION</h3>
-                <p class="build__text">
-                  Practice high-risk tasks safely. Train pilots, surgeons and
-                  engineers in realistic scenarios with instant feedback.
-                </p>
-                <a class="build__btn" href="#join">TRY IT NOW</a>
-              </div>
-              <div class="build__cards reveal" style="--d: 0.12s">
-                <img
-                  class="build__img"
-                  src="./images/Mask group (4).png"
-                  alt=""
-                />
-                <h3 class="build__title">EDUCATION</h3>
-                <p class="build__text">
-                  Turn lessons into journeys. Explore ancient cities, the human
-                  body or a chemistry lab without leaving the classroom.
-                </p>
-                <a class="build__btn" href="#join">TRY IT NOW</a>
-              </div>
-              <div class="build__cards reveal" style="--d: 0.24s">
-                <img
-                  class="build__img"
-                  src="./images/Mask group (5).png"
-                  alt=""
-                />
-                <h3 class="build__title">SELF-CARE</h3>
-                <p class="build__text">
-                  Guided meditation, breathing and relaxation spaces that help
-                  you slow down, focus and recharge.
-                </p>
-                <a class="build__btn" href="#join">TRY IT NOW</a>
-              </div>
-              <div class="build__cards reveal" style="--d: 0.36s">
-                <img
-                  class="build__img"
-                  src="./images/Mask group (6).png"
-                  alt=""
-                />
-                <h3 class="build__title">OUTDOOR</h3>
-                <p class="build__text">
-                  Hike mountains, dive reefs and visit remote places from
-                  anywhere, with 360° scenery and spatial sound.
-                </p>
-                <a class="build__btn" href="#join">TRY IT NOW</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= TECHNOLOGIES ================= -->
-      <section class="tech" id="tech">
-        <div class="container">
-          <div class="tech__wrapper">
-            <div class="tech__main">
-              <div class="tech__card reveal">
-                <h1 class="tech__h1">TECHNOLOGIES & HARDWARE</h1>
-                <h2 class="tech__h2">USED BY HYDRA VR.</h2>
-                <p class="tech__p">
-                  Our worlds run on real-time 3D engines, motion-tracked
-                  headsets, hand controllers and spatial audio.
-                </p>
-              </div>
-            </div>
-            <div class="tech__imgs">
-              <div class="reveal" style="--d: 0s">
-                <img
-                  src="./images/Hydra-Tech1 1.png"
-                  alt="Hydra technology 1"
-                />
-              </div>
-              <div class="reveal" style="--d: 0.12s">
-                <img
-                  src="./images/Hydra-Tech3 1.png"
-                  alt="Hydra technology 2"
-                />
-              </div>
-              <div class="reveal" style="--d: 0.24s">
-                <img
-                  src="./images/Hydra-Tech2 1.png"
-                  alt="Hydra technology 3"
-                />
-              </div>
-              <div class="reveal" style="--d: 0.36s">
-                <img
-                  src="./images/Hydra-Tech4 1.png"
-                  alt="Hydra technology 4"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= PROCESS ================= -->
-      <section class="procces" id="process">
-        <div class="container">
-          <div class="procces__wrapper">
-            <div class="procces__main about__main">
-              <div class="about__card reveal">
-                <h1 class="h1">HOW WE BUILD</h1>
-                <div class="about__h2">
-                  <h2 class="h2">WITH HYDRA VR?</h2>
-                  <img src="./images/Component 1.svg" alt="" />
-                </div>
-              </div>
-              <div class="about__title reveal" style="--d: 0.15s">
-                <p class="p">
-                  Every project moves through four clear stages. You see
-                  progress at each step and can give feedback before we move on,
-                  so the final world matches your vision.
-                </p>
-              </div>
-            </div>
-
-            <div class="procces__numbers">
-              <div class="procces__cards reveal" style="--d: 0s">
-                <div class="mini-cards"><h1 class="procces-h1">01</h1></div>
-                <div class="tech__h3">
-                  <img src="./images/arrow-small-right.png" alt="" />
+                <div class="fact reveal" style="--d: 0.15s">
+                  <span class="fact__ico">💻</span>
                   <div>
-                    <h3>3D Conception <br />& Design</h3>
-                    <p class="step-p">Concept art, models and environments.</p>
+                    <small>Hozir o'rganyapman</small>Sayt yasash: HTML, CSS, JS
                   </div>
                 </div>
-              </div>
-              <div class="procces__cards reveal" style="--d: 0.12s">
-                <div class="mini-cards"><h1 class="procces-h1">02</h1></div>
-                <div class="tech__h3">
-                  <img src="./images/arrow-small-right.png" alt="" />
+                <div class="fact reveal" style="--d: 0.2s">
+                  <span class="fact__ico">👨‍💻</span>
                   <div>
-                    <h3>Interaction <br />Design</h3>
-                    <p class="step-p">
-                      How you move, grab and talk in the world.
-                    </p>
+                    <small>Sevimli mashg'ulot</small>Yangi saytlar yaratish
                   </div>
                 </div>
-              </div>
-              <div class="procces__cards reveal" style="--d: 0.24s">
-                <div class="mini-cards"><h1 class="procces-h1">03</h1></div>
-                <div class="tech__h3">
-                  <img src="./images/arrow-small-right.png" alt="" />
-                  <div>
-                    <h3>VR World <br />User Testing</h3>
-                    <p class="step-p">Real people try it and we refine it.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="procces__cards reveal" style="--d: 0.36s">
-                <div class="mini-cards"><h1 class="procces-h1">04</h1></div>
-                <div class="tech__h3">
-                  <img src="./images/arrow-small-right.png" alt="" />
-                  <div>
-                    <h3>Hydra VR <br />Deploy</h3>
-                    <p class="step-p">Launch on your headsets, with support.</p>
-                  </div>
+                <div class="fact reveal" style="--d: 0.25s">
+                  <span class="fact__ico">⚽</span>
+                  <div><small>Orzu</small>Professional futbolchi bo'lish</div>
                 </div>
               </div>
             </div>
@@ -339,126 +152,231 @@
         </div>
       </section>
 
-      <!-- ================= JOIN ================= -->
-      <section class="join" id="join">
-        <div class="container">
-          <div class="join__wrapper reveal">
-            <div class="hydra">
-              <h1 class="hydra-h1">JOIN HYDRA</h1>
-              <img class="iii" src="./images/Vector 16.png" alt="" />
-              <h2 class="hydra-h2">Let’s Build Your VR Experience</h2>
-            </div>
+      <!-- ================= PROJECTS ================= -->
+      <section class="sec" id="loyhalarim">
+        <div class="wrap">
+          <h2 class="sec__title reveal"><i></i>Loyihalarim</h2>
 
-            <form action="#" novalidate>
-              <div class="main__inp">
-                <div class="inputs">
-                  <input
-                    class="inp"
-                    placeholder="First name"
-                    type="text"
-                    name="first_name"
-                    aria-label="First name"
-                    required
-                  />
-                  <input
-                    class="inp"
-                    placeholder="Last name"
-                    type="text"
-                    name="last_name"
-                    aria-label="Last name"
-                    required
-                  />
-                  <input
-                    class="inp"
-                    placeholder="Email"
-                    type="email"
-                    name="email"
-                    aria-label="Email"
-                    required
-                  />
-                  <input
-                    class="inp"
-                    placeholder="Phone number"
-                    type="tel"
-                    name="phone"
-                    aria-label="Phone number"
-                  />
-                </div>
-                <input
-                  class="subject"
-                  placeholder="Subject"
-                  type="text"
-                  name="subject"
-                  aria-label="Subject"
-                />
-                <textarea
-                  class="comment"
-                  placeholder="Tell us something..."
-                  name="comment"
-                  aria-label="Message"
-                  rows="6"
-                ></textarea>
-                <button class="inp-button" type="submit">SEND TO HYDRA</button>
-                <p class="form-note" role="status" hidden>
-                  Thank you! We will get back to you soon.
-                </p>
+          <div class="proj-list">
+            <article class="proj proj--a reveal">
+              <div class="proj__body">
+                <span class="proj__no">01</span>
+                <h3>Hydra web-sayti</h3>
+                <p>Mening birinchi web-saytim.</p>
+                <a
+                  class="btn btn--light"
+                  href="https://hydra-two-nu.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Saytni ko'rish →</a
+                >
               </div>
-            </form>
+              <a
+                class="proj__img"
+                href="https://hydra-two-nu.vercel.app/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./images/hydra.jpeg"
+                  alt="Hydra sayti"
+                  loading="lazy"
+                />
+              </a>
+            </article>
+
+            <article class="proj proj--b reveal">
+              <div class="proj__body">
+                <span class="proj__no">02</span>
+                <h3>Qurish web-sayti</h3>
+                <p>Eng yaxshi ko'rgan loyiham.</p>
+                <!-- href="#" o'rniga saytingiz havolasini yozing -->
+                <a class="btn btn--light" href="#">Saytni ko'rish →</a>
+              </div>
+              <a class="proj__img" href="#">
+                <img
+                  src="./images/build.jpeg"
+                  alt="Qurish sayti"
+                  loading="lazy"
+                />
+              </a>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <!-- ================= GROUP CAROUSEL ================= -->
+      <section class="sec gx" id="guruh" aria-label="IT guruhim">
+        <div class="wrap">
+          <h2 class="sec__title reveal"><i></i>IT Guruhim</h2>
+        </div>
+
+        <div class="gx__track" tabindex="0" aria-label="Guruhdoshlar karuseli">
+          <figure class="gx__slide">
+            <img src="images/1.jpg" alt="Ilyos" loading="lazy" />
+            <figcaption>Ilyos</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/2.jpg" alt="Javohir" loading="lazy" />
+            <figcaption>Javohir</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/3.jpg" alt="Muhammad Yusuf" loading="lazy" />
+            <figcaption>Muhammad Yusuf</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/4.jpg" alt="Shohruh" loading="lazy" />
+            <figcaption>Shohruh</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/5.jpg" alt="Husnida" loading="lazy" />
+            <figcaption>Husnida</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/6.jpg" alt="Shohjahon" loading="lazy" />
+            <figcaption>Shohjahon</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/7.jpg" alt="Muhammad Ali" loading="lazy" />
+            <figcaption>Muhammad Ali</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/8.jpg" alt="Sunnatbek" loading="lazy" />
+            <figcaption>Sunnatbek</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/9.jpg" alt="Botir" loading="lazy" />
+            <figcaption>Botir</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/10.jpg" alt="Jafar" loading="lazy" />
+            <figcaption>Jafar</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/11.jpg" alt="Muhammad Ali" loading="lazy" />
+            <figcaption>Muhammad Ali</figcaption>
+          </figure>
+          <figure class="gx__slide">
+            <img src="images/12.jpg" alt="Ozodbek" loading="lazy" />
+            <figcaption>Ozodbek</figcaption>
+          </figure>
+        </div>
+
+        <div class="gx__dots" role="group" aria-label="Surat tanlash"></div>
+      </section>
+
+      <!-- ================= FAMILY ================= -->
+      <section class="sec fam" id="oilam">
+        <div class="wrap">
+          <h2 class="sec__title reveal"><i></i>Mening oilam</h2>
+          <p class="fam__lead reveal">
+            Biz oilada 5 kishi yashaymiz: Dadam, Oyim, ikki Singlim va Men.
+          </p>
+        </div>
+
+        <div class="fam__grid">
+          <!-- Dadam: ismi va rasmini o'zingiz yozing (images/dad.jpg) -->
+
+          <article class="fcard reveal" style="--d: 0.15s">
+            <div class="fcard__photo">
+              <img src="images/mom.jpg" alt="Feruza" loading="lazy" />
+            </div>
+            <span class="fcard__tag">OYIM · 38 yosh</span>
+            <h3>Feruza</h3>
+            <p>Direktor</p>
+          </article>
+
+          <article class="fcard reveal" style="--d: 0.3s">
+            <div class="fcard__photo">
+              <img src="images/sumaya.jpg" alt="Sumaya" loading="lazy" />
+            </div>
+            <span class="fcard__tag">SINGLIM · 9 yosh</span>
+            <h3>Sumaya</h3>
+            <p>3-sinf o'quvchisi</p>
+          </article>
+
+          <article class="fcard reveal" style="--d: 0.45s">
+            <div class="fcard__photo">
+              <img src="images/yasi.jpg" alt="Yasmina" loading="lazy" />
+            </div>
+            <span class="fcard__tag">SINGLIM · 6 yosh</span>
+            <h3>Yasmina</h3>
+            <p>Bog'cha bitiruvchisi</p>
+          </article>
+
+          <article class="fcard reveal" style="--d: 0.6s">
+            <div class="fcard__photo">
+              <img src="images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
+            </div>
+            <span class="fcard__tag">MEN · 13 yosh</span>
+            <h3>Dovudbek</h3>
+            <p>7-sinf o'quvchisi</p>
+          </article>
         </div>
       </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer>
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__main">
-            <div class="footer__card">
-              <img src="./images/Frame (1).svg" alt="Hydra VR" />
+    <footer class="ft" id="footer">
+      <div class="wrap">
+        <div class="ft__box reveal">
+          <div class="ft__top">
+            <div>
+              <h2 class="ft__title">Xayr!</h2>
+              <p class="ft__sub">Yana ko'rishguncha</p>
+              <p class="ft__text">
+                Vaqtingizni ajratib, mening portfolioimni ko'rganingiz uchun
+                rahmat. Agar sizga mening ishlarim yoqqan bo'lsa, men bilan
+                bog'lanishingiz mumkin.
+              </p>
             </div>
-            <img class="vector" src="./images/Vector 20.png" alt="" />
-            <ul class="footer-ul">
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#services">SERVICES</a></li>
-              <li><a href="#tech">TECHNOLOGIES</a></li>
-              <li><a href="#process">HOW TO</a></li>
-              <li><a href="#join">JOIN HYDRA</a></li>
-            </ul>
-            <img class="vector" src="./images/Vector 20.png" alt="" />
-            <ul class="footer-ul">
-              <li><a href="#">F.A.Q</a></li>
-              <li><a href="#">SITEMAP</a></li>
-              <li><a href="#">CONDITIONS</a></li>
-              <li><a href="#">LICENSES</a></li>
-            </ul>
-            <img class="vector" src="./images/Vector 20.png" alt="" />
-            <div class="footer__download">
-              <h3>SOCIALIZE WITH HYDRA</h3>
-              <div class="mini-logos">
-                <a href="#"
-                  ><img src="./images/facebook (1).png" alt="Facebook"
-                /></a>
-                <a href="#"><img src="./images/twitter.png" alt="Twitter" /></a>
-                <a href="#"
-                  ><img src="./images/linkedin.png" alt="LinkedIn"
-                /></a>
-                <a href="#"><img src="./images/youtube.png" alt="YouTube" /></a>
-                <a href="#"
-                  ><img src="./images/instagram.png" alt="Instagram"
-                /></a>
-                <a href="#"
-                  ><img src="./images/pinterest.png" alt="Pinterest"
-                /></a>
-              </div>
-              <a class="footer__button" href="#join">BUILD YOUR WORLD</a>
+
+            <div class="ft__contact">
+              <h3 class="ft__h">Bog'lanish</h3>
+
+              <a class="ft__link" href="mailto:botirjonovdovudbek22@gmail.com">
+                <span class="ft__ico">✉️</span>
+                <span class="ft__lbl"
+                  ><small>Email</small>botirjonovdovudbek22@gmail.com</span
+                >
+              </a>
+
+              <a
+                class="ft__link"
+                href="https://www.instagram.com/botirjonov_10?stkn=b2VwODhlY2F2NGFu"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ft__ico">📸</span>
+                <span class="ft__lbl"
+                  ><small>Instagram</small>botirjonov_10</span
+                >
+              </a>
+
+              <a
+                class="ft__link"
+                href="https://github.com/Botirjonov22"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="ft__ico">💻</span>
+                <span class="ft__lbl"><small>Github</small>Botirjonov22</span>
+              </a>
             </div>
           </div>
-          <img class="vector2" src="./images/Vector 17 (1).png" alt="" />
-          <h3 class="last-h3">
-            2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS
-            RESERVED
-          </h3>
+
+          <nav class="ft__nav" aria-label="Footer menyu">
+            <a href="#about">Men haqimda</a>
+            <a href="#loyhalarim">Loyihalarim</a>
+            <a href="#guruh">IT Guruhim</a>
+            <a href="#oilam">Oilam</a>
+            <a href="#footer">Bog'lanish</a>
+          </nav>
+
+          <div class="ft__bottom">
+            <p>© 2026 Dovudbek · Made with love and code</p>
+            <a class="ft__up" href="#header">↑ Tepaga</a>
+          </div>
         </div>
       </div>
     </footer>
