@@ -15,12 +15,10 @@
     />
     <link rel="stylesheet" href="./main.css" />
   </head>
-
   <body>
-    <!-- ================= HEADER ================= -->
     <header class="hd" id="header">
       <div class="wrap hd__bar">
-        <a class="hd__logo" href="#header" aria-label="Dovudbek">
+        <a class="hd__logo" href="#header">
           <span class="hd__word" aria-hidden="true">
             <span style="--i: 0">D</span><span style="--i: 1">O</span
             ><span style="--i: 2">V</span><span style="--i: 3">U</span
@@ -28,16 +26,10 @@
             ><span style="--i: 6">E</span><span style="--i: 7">K</span> </span
           ><b></b>
         </a>
-
-        <button
-          class="hd__burger"
-          aria-label="Menyuni ochish"
-          aria-expanded="false"
-        >
+        <button class="hd__burger">
           <span></span><span></span><span></span>
         </button>
-
-        <nav class="hd__nav" aria-label="Asosiy menyu">
+        <nav class="hd__nav">
           <a href="#about">Men haqimda</a>
           <a href="#loyhalarim">Loyihalarim</a>
           <a href="#guruh">IT Guruhim</a>
@@ -46,9 +38,7 @@
         </nav>
       </div>
     </header>
-
     <main>
-      <!-- ================= HERO ================= -->
       <section class="hero">
         <div class="wrap hero__grid">
           <div class="hero__text reveal">
@@ -62,14 +52,11 @@
               <a class="btn btn--ghost" href="#loyhalarim">Loyihalarim</a>
             </div>
           </div>
-
           <div class="hero__photo reveal" style="--d: 0.2s">
             <img src="./images/portfolio.jpg" alt="Dovudbek" />
           </div>
         </div>
       </section>
-
-      <!-- ================= MARQUEE ================= -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
           <div class="marquee__group">
@@ -102,17 +89,13 @@
           </div>
         </div>
       </div>
-
-      <!-- ================= ABOUT ================= -->
       <section class="sec about" id="about">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Men haqimda</h2>
-
           <div class="about__grid">
             <div class="about__photo reveal">
               <img src="./images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
             </div>
-
             <div class="about__info">
               <p class="about__text reveal">
                 Salom! Ismim <b>Dovudbek</b>, 161-maktabda 7-"V" sinf
@@ -120,7 +103,6 @@
                 o'rganaman va <b>5 yildan beri futbol</b> bilan shug'ullanaman.
                 Kelajakda dasturchi va futbolchi bo'lishni orzu qilaman.
               </p>
-
               <div class="facts">
                 <div class="fact reveal" style="--d: 0.05s">
                   <span class="fact__ico">🎂</span>
@@ -151,8 +133,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ================= PROJECTS ================= -->
       <section class="sec" id="loyhalarim">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Loyihalarim</h2>
@@ -184,7 +164,6 @@
                 />
               </a>
             </article>
-
             <article class="proj proj--b reveal">
               <div class="proj__body">
                 <span class="proj__no">02</span>
@@ -204,13 +183,10 @@
           </div>
         </div>
       </section>
-
-      <!-- ================= GROUP CAROUSEL ================= -->
       <section class="sec gx" id="guruh" aria-label="IT guruhim">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>IT Guruhim</h2>
         </div>
-
         <div class="gx__track" tabindex="0" aria-label="Guruhdoshlar karuseli">
           <figure class="gx__slide">
             <img src="images/1.jpg" alt="Ilyos" loading="lazy" />
@@ -261,11 +237,8 @@
             <figcaption>Ozodbek</figcaption>
           </figure>
         </div>
-
         <div class="gx__dots" role="group" aria-label="Surat tanlash"></div>
       </section>
-
-      <!-- ================= FAMILY ================= -->
       <section class="sec fam" id="oilam">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Mening oilam</h2>
@@ -273,10 +246,7 @@
             Biz oilada 5 kishi yashaymiz: Dadam, Oyim, ikki Singlim va Men.
           </p>
         </div>
-
         <div class="fam__grid">
-          <!-- Dadam: ismi va rasmini o'zingiz yozing (images/dad.jpg) -->
-
           <article class="fcard reveal" style="--d: 0.15s">
             <div class="fcard__photo">
               <img src="images/mom.jpg" alt="Feruza" loading="lazy" />
@@ -285,7 +255,6 @@
             <h3>Feruza</h3>
             <p>Direktor</p>
           </article>
-
           <article class="fcard reveal" style="--d: 0.3s">
             <div class="fcard__photo">
               <img src="images/sumaya.jpg" alt="Sumaya" loading="lazy" />
@@ -294,7 +263,6 @@
             <h3>Sumaya</h3>
             <p>3-sinf o'quvchisi</p>
           </article>
-
           <article class="fcard reveal" style="--d: 0.45s">
             <div class="fcard__photo">
               <img src="images/yasi.jpg" alt="Yasmina" loading="lazy" />
@@ -303,7 +271,6 @@
             <h3>Yasmina</h3>
             <p>Bog'cha bitiruvchisi</p>
           </article>
-
           <article class="fcard reveal" style="--d: 0.6s">
             <div class="fcard__photo">
               <img src="images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
@@ -315,8 +282,6 @@
         </div>
       </section>
     </main>
-
-    <!-- ================= FOOTER ================= -->
     <footer class="ft" id="footer">
       <div class="wrap">
         <div class="ft__box reveal">
