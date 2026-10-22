@@ -1,8 +1,3 @@
-/* =========================================================
-   DOVUDBEK PORTFOLIO — main.css
-   Animatsiyalar faqat HOVER va SCROLL bilan ishlaydi.
-   ========================================================= */
-
 :root {
   --bg: #070b16;
   --cyan: #00f0ff;
@@ -68,8 +63,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-/* yengil to'r naqsh */
 body::before {
   content: "";
   position: fixed;
@@ -100,7 +93,7 @@ footer[id] {
   scroll-margin-top: 90px;
 }
 
-/* ================= SCROLL REVEAL ================= */
+
 .js .reveal:not(.is-visible) {
   opacity: 0;
   transform: translateY(50px);
@@ -114,7 +107,7 @@ footer[id] {
   transition-delay: var(--d, 0s);
 }
 
-/* ================= BUTTONS ================= */
+
 .btn {
   display: inline-block;
   padding: 16px 30px;
@@ -964,8 +957,8 @@ footer[id] {
   }
 }
 
-@media (prefers-reduced-motion: reduce) html, .gx__track {
-  scroll-behavior: auto;
+@media (prefers-reduced-motion: reduce) {
+  scroll-behaviorl: auto;
 }
 .reveal,
 .btn,
