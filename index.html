@@ -4,30 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dovudbek | Portfolio</title>
+
     <script>
       document.documentElement.classList.add("js");
     </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./main.css" />
   </head>
+
   <body>
+    <!-- HEADER -->
     <header class="hd" id="header">
       <div class="wrap hd__bar">
         <a class="hd__logo" href="#header">
           <span class="hd__word" aria-hidden="true">
-            <span style="--i: 0">B</span><span style="--i: 1">D</span
-            ><span style="--i: 2">2</span><span style="--i: 3">2</span
-          
-          ><b></b>
+            <span style="--i: 0">B</span>
+            <span style="--i: 1">D</span>
+            <span style="--i: 2">2</span>
+            <span style="--i: 3">2</span>
+          </span>
+          <b></b>
         </a>
-        <button class="hd__burger">
-          <span></span><span></span><span></span>
+
+        <button class="hd__burger" type="button" aria-label="Menyuni ochish">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
         <nav class="hd__nav">
           <a href="#about">Men haqimda</a>
           <a href="#loyhalarim">Loyihalarim</a>
@@ -37,25 +48,34 @@
         </nav>
       </div>
     </header>
+
     <main>
+      <!-- HERO -->
       <section class="hero">
         <div class="wrap hero__grid">
           <div class="hero__text reveal">
             <p class="hero__hi">Salom,</p>
+
             <h1 class="hero__name">Mening ismim <em>Dovudbek</em></h1>
+
             <p class="hero__desc">
-              Yoshim 13da. Futbol oynashni<br />va dasturlashni sevaman.
+              Yoshim 13da. Futbol o'ynashni<br />
+              va dasturlashni sevaman.
             </p>
+
             <div class="hero__btns">
               <a class="btn btn--solid" href="#about">Meni tanish</a>
               <a class="btn btn--ghost" href="#loyhalarim">Loyihalarim</a>
             </div>
           </div>
+
           <div class="hero__photo reveal" style="--d: 0.2s">
             <img src="./images/portfolio.jpg" alt="Dovudbek" />
           </div>
         </div>
       </section>
+
+      <!-- MARQUEE -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
           <div class="marquee__group">
@@ -72,6 +92,7 @@
               >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
             >
           </div>
+
           <div class="marquee__group">
             <span
               >FRONTEND ✦ HTML ✦ CSS ✦ JAVASCRIPT ✦ KELAJAK DASTURCHI ✦</span
@@ -88,13 +109,17 @@
           </div>
         </div>
       </div>
+
+      <!-- ABOUT -->
       <section class="sec about" id="about">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Men haqimda</h2>
+
           <div class="about__grid">
             <div class="about__photo reveal">
               <img src="./images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
             </div>
+
             <div class="about__info">
               <p class="about__text reveal">
                 Salom! Ismim <b>Dovudbek</b>, 161-maktabda 7-"V" sinf
@@ -102,59 +127,82 @@
                 o'rganaman va <b>5 yildan beri futbol</b> bilan shug'ullanaman.
                 Kelajakda dasturchi va futbolchi bo'lishni orzu qilaman.
               </p>
+
               <div class="facts">
                 <div class="fact reveal" style="--d: 0.05s">
                   <span class="fact__ico">🎂</span>
-                  <div><small>Tug'ilgan sana</small>17.06.2013</div>
+                  <div>
+                    <small>Tug'ilgan sana</small>
+                    17.06.2013
+                  </div>
                 </div>
+
                 <div class="fact reveal" style="--d: 0.1s">
                   <span class="fact__ico">🏫</span>
-                  <div><small>Maktabim</small>161-maktab, 7-"V" sinf</div>
+                  <div>
+                    <small>Maktabim</small>
+                    161-maktab, 7-"V" sinf
+                  </div>
                 </div>
+
                 <div class="fact reveal" style="--d: 0.15s">
                   <span class="fact__ico">💻</span>
                   <div>
-                    <small>Hozir o'rganyapman</small>Sayt yasash: HTML, CSS, JS
+                    <small>Hozir o'rganyapman</small>
+                    Sayt yasash: HTML, CSS, JS
                   </div>
                 </div>
+
                 <div class="fact reveal" style="--d: 0.2s">
                   <span class="fact__ico">👨‍💻</span>
                   <div>
-                    <small>Sevimli mashg'ulot</small>Yangi saytlar yaratish
+                    <small>Sevimli mashg'ulot</small>
+                    Yangi saytlar yaratish
                   </div>
                 </div>
+
                 <div class="fact reveal" style="--d: 0.25s">
                   <span class="fact__ico">⚽</span>
-                  <div><small>Orzu</small>Professional futbolchi bo'lish</div>
+                  <div>
+                    <small>Orzu</small>
+                    Professional futbolchi bo'lish
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- PROJECTS -->
       <section class="sec" id="loyhalarim">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Loyihalarim</h2>
 
           <div class="proj-list">
+            <!-- PROJECT 01 -->
             <article class="proj proj--a reveal">
               <div class="proj__body">
                 <span class="proj__no">01</span>
                 <h3>Hydra web-sayti</h3>
                 <p>Mening birinchi web-saytim.</p>
+
                 <a
                   class="btn btn--light"
                   href="https://hydra-two-nu.vercel.app/"
                   target="_blank"
-                  rel="noopener"
-                  >Saytni ko'rish →</a
+                  rel="noopener noreferrer"
                 >
+                  Saytni ko'rish →
+                </a>
               </div>
+
               <a
                 class="proj__img"
                 href="https://hydra-two-nu.vercel.app/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
+                aria-label="Hydra web-saytini ochish"
               >
                 <img
                   src="./images/hydra.jpeg"
@@ -163,49 +211,54 @@
                 />
               </a>
             </article>
-           
-<article class="proj proj--a reveal">
-  <div class="proj__body">
-    <span class="proj__no">02</span>
-    <h3>GREENMIND — web-sayti</h3>
-    <p>Gul sotib olish syti.</p>
-    <a
-      class="btn btn--light"
-      href="https://flowerweb-eight.vercel.app/"
-      target="_blank"
-      rel="noopener"
-    >
-      Saytni ko'rish →
-    </a>
-  </div>
 
-  <a
-    class="proj__img"
-    href="https://flowerweb-eight.vercel.app/"
-    target="_blank"
-    rel="noopener"
-  >
-    <img
-      src="./images/Снимок экрана_24-10-2026_142147_127.0.0.1.jpeg"
-      alt="GREENMIND sayti"
-      loading="lazy"
-      class="greenmind-img"
-    />
-  </a>
-</article>
+            <!-- PROJECT 02: GREENMIND -->
+            <article class="proj proj--a proj--greenmind reveal">
+              <div class="proj__body">
+                <span class="proj__no">02</span>
+                <h3>GREENMIND — web-sayti</h3>
+                <p>Gul sotib olish va chiroyli guldastalarni topish sayti.</p>
 
+                <a
+                  class="btn btn--light"
+                  href="https://flowerweb-eight.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Saytni ko'rish →
+                </a>
+              </div>
+
+              <a
+                class="proj__img"
+                href="https://flowerweb-eight.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GREENMIND web-saytini ochish"
+              >
+                <img
+                  src="./images/Снимок экрана_24-10-2026_142147_127.0.0.1.jpeg"
+                  alt="GREENMIND sayti"
+                  loading="lazy"
+                  class="greenmind-img"
+                />
+              </a>
+            </article>
+
+            <!-- PROJECT 03: CONSTRUCTION -->
             <article class="proj proj--b reveal">
               <div class="proj__body">
                 <span class="proj__no">03</span>
-                <h3>Qurish web-sayti</h3>
-                <p>Eng yaxshi ko'rgan loyiham.</p>
-                <!-- href="#" o'rniga saytingiz havolasini yozing -->
-                <a class="btn btn--light" href="#">Saytni ko'rish →</a>
+                <h3>Qurilish web-sayti</h3>
+                <p>Qurilish xizmatlari va loyihalari haqidagi web-sayt.</p>
+
+                <a class="btn btn--light" href="#"> Saytni ko'rish → </a>
               </div>
-              <a class="proj__img" href="#">
+
+              <a class="proj__img" href="#" aria-label="Qurilish sayti">
                 <img
                   src="./images/build.jpeg"
-                  alt="Qurish sayti"
+                  alt="Qurilish sayti"
                   loading="lazy"
                 />
               </a>
@@ -213,69 +266,128 @@
           </div>
         </div>
       </section>
-      <section class="sec gx" id="guruh" aria-label="IT guruhim">
-        <div class="wrap">
-          <h2 class="sec__title reveal"><i></i>IT Guruhim</h2>
-        </div>
-        <div class="gx__track" tabindex="0" aria-label="Guruhdoshlar karuseli">
-          <figure class="gx__slide">
-            <img src="images/1.jpg" alt="Ilyos" loading="lazy" />
-            <figcaption>Ilyos</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/2.jpg" alt="Javohir" loading="lazy" />
-            <figcaption>Javohir</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/3.jpg" alt="Muhammad Yusuf" loading="lazy" />
-            <figcaption>Muhammad Yusuf</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/4.jpg" alt="Shohruh" loading="lazy" />
-            <figcaption>Shohruh</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/5.jpg" alt="Husnida" loading="lazy" />
-            <figcaption>Husnida</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/6.jpg" alt="Shohjahon" loading="lazy" />
-            <figcaption>Shohjahon</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/7.jpg" alt="Muhammad Ali" loading="lazy" />
-            <figcaption>Muhammad Ali</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/8.jpg" alt="Sunnatbek" loading="lazy" />
-            <figcaption>Sunnatbek</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/9.jpg" alt="Botir" loading="lazy" />
-            <figcaption>Botir</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/10.jpg" alt="Jafar" loading="lazy" />
-            <figcaption>Jafar</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/11.jpg" alt="Muhammad Ali" loading="lazy" />
-            <figcaption>Muhammad Ali</figcaption>
-          </figure>
-          <figure class="gx__slide">
-            <img src="images/12.jpg" alt="Ozodbek" loading="lazy" />
-            <figcaption>Ozodbek</figcaption>
-          </figure>
-        </div>
-        <div class="gx__dots" role="group" aria-label="Surat tanlash"></div>
-      </section>
+<section class="sec gx" id="guruh">
+  <div class="wrap">
+    <h2 class="sec__title reveal">
+      <i></i> IT Guruhim
+    </h2>
+
+    <p class="gx__subtitle">
+      Mening IT guruhdoshlarim bilan tanishing.
+    </p>
+
+    <div class="gx__controls">
+      <span class="gx__counter">
+        <span id="gxCurrent">01</span>
+        /
+        <span id="gxTotal">12</span>
+      </span>
+
+      <div class="gx__buttons">
+        <button
+          class="gx__prev"
+          id="gxPrev"
+          type="button"
+          aria-label="Previous slide"
+        >
+          &#8592;
+        </button>
+
+        <button
+          class="gx__next"
+          id="gxNext"
+          type="button"
+          aria-label="Next slide"
+        >
+          &#8594;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="gx__track"
+    id="gxTrack"
+    tabindex="0"
+    aria-label="Classmates carousel"
+  >
+    <figure class="gx__slide">
+      <img src="images/1.jpg" alt="Ilyos" loading="lazy">
+      <figcaption>Ilyos</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/2.jpg" alt="Javohir" loading="lazy">
+      <figcaption>Javohir</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/3.jpg" alt="Muhammad Yusuf" loading="lazy">
+      <figcaption>Muhammad Yusuf</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/4.jpg" alt="Shohruh" loading="lazy">
+      <figcaption>Shohruh</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/5.jpg" alt="Husnida" loading="lazy">
+      <figcaption>Husnida</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/6.jpg" alt="Shohjahon" loading="lazy">
+      <figcaption>Shohjahon</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/7.jpg" alt="Muhammad Ali" loading="lazy">
+      <figcaption>Muhammad Ali</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/8.jpg" alt="Sunnatbek" loading="lazy">
+      <figcaption>Sunnatbek</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/9.jpg" alt="Botir" loading="lazy">
+      <figcaption>Botir</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/10.jpg" alt="Jafar" loading="lazy">
+      <figcaption>Jafar</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/11.jpg" alt="Muhammad Ali" loading="lazy">
+      <figcaption>Muhammad Ali</figcaption>
+    </figure>
+
+    <figure class="gx__slide">
+      <img src="images/12.jpg" alt="Ozodbek" loading="lazy">
+      <figcaption>Ozodbek</figcaption>
+    </figure>
+  </div>
+
+  <div
+    class="gx__dots"
+    id="gxDots"
+    role="group"
+    aria-label="Choose a slide"
+  ></div>
+</section>
       <section class="sec fam" id="oilam">
         <div class="wrap">
           <h2 class="sec__title reveal"><i></i>Mening oilam</h2>
+
           <p class="fam__lead reveal">
-            Biz oilada 5 kishi yashaymiz: Dadam, Oyim, ikki Singlim va Men.
+            Biz oilada 5 kishi yashaymiz: Dadam, Oyim, ikki singlim va men.
           </p>
         </div>
+
         <div class="fam__grid">
           <article class="fcard reveal" style="--d: 0.15s">
             <div class="fcard__photo">
@@ -285,6 +397,7 @@
             <h3>Feruza</h3>
             <p>Direktor</p>
           </article>
+
           <article class="fcard reveal" style="--d: 0.3s">
             <div class="fcard__photo">
               <img src="images/sumaya.jpg" alt="Sumaya" loading="lazy" />
@@ -293,6 +406,7 @@
             <h3>Sumaya</h3>
             <p>3-sinf o'quvchisi</p>
           </article>
+
           <article class="fcard reveal" style="--d: 0.45s">
             <div class="fcard__photo">
               <img src="images/yasi.jpg" alt="Yasmina" loading="lazy" />
@@ -301,6 +415,7 @@
             <h3>Yasmina</h3>
             <p>Bog'cha bitiruvchisi</p>
           </article>
+
           <article class="fcard reveal" style="--d: 0.6s">
             <div class="fcard__photo">
               <img src="images/porfolio2.jpg" alt="Dovudbek" loading="lazy" />
@@ -309,20 +424,20 @@
             <h3>Dovudbek</h3>
             <p>7-sinf o'quvchisi</p>
           </article>
-          <article class="fcard reveal" style="--d: 0.6s">
+
+          <article class="fcard reveal" style="--d: 0.75s">
             <div class="fcard__photo">
-              <img src="images/dd.jpg" alt="" loading="lazy" />
+              <img src="images/dd.jpg" alt="Dadam" loading="lazy" />
             </div>
             <span class="fcard__tag">DADAM · 40 yosh</span>
             <h3>Dadam</h3>
-            <p>
-              Meni futboll va IT da <br />
-              qollab quvvatlaydilar
-            </p>
+            <p>Meni futbol va IT sohasida qo'llab-quvvatlaydilar.</p>
           </article>
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
     <footer class="ft" id="footer">
       <div class="wrap">
         <div class="ft__box reveal">
@@ -330,6 +445,7 @@
             <div>
               <h2 class="ft__title">Xayr!</h2>
               <p class="ft__sub">Yana ko'rishguncha</p>
+
               <p class="ft__text">
                 Vaqtingizni ajratib, mening portfolioimni ko'rganingiz uchun
                 rahmat. Agar sizga mening ishlarim yoqqan bo'lsa, men bilan
@@ -342,31 +458,36 @@
 
               <a class="ft__link" href="mailto:botirjonovdovudbek22@gmail.com">
                 <span class="ft__ico">✉️</span>
-                <span class="ft__lbl"
-                  ><small>Email</small>botirjonovdovudbek22@gmail.com</span
-                >
+                <span class="ft__lbl">
+                  <small>Email</small>
+                  botirjonovdovudbek22@gmail.com
+                </span>
               </a>
 
               <a
                 class="ft__link"
                 href="https://www.instagram.com/botirjonov_10?stkn=b2VwODhlY2F2NGFu"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span class="ft__ico">📸</span>
-                <span class="ft__lbl"
-                  ><small>Instagram</small>botirjonov_10</span
-                >
+                <span class="ft__lbl">
+                  <small>Instagram</small>
+                  botirjonov_10
+                </span>
               </a>
 
               <a
                 class="ft__link"
                 href="https://github.com/Botirjonov22"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span class="ft__ico">💻</span>
-                <span class="ft__lbl"><small>Github</small>Botirjonov22</span>
+                <span class="ft__lbl">
+                  <small>Github</small>
+                  Botirjonov22
+                </span>
               </a>
             </div>
           </div>
