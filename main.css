@@ -552,6 +552,7 @@ footer[id] {
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+
 .proj__img:hover img {
   transform: scale(1.07);
 }
