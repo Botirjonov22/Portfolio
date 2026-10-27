@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.add("js");
 
   const revealElements = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right, .fm-card"
+    ".reveal, .reveal-left, .reveal-right, .fm-card",
   );
 
   if ("IntersectionObserver" in window) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -20px 0px",
-      }
+      },
     );
 
     revealElements.forEach((element, index) => {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (gallery) {
     const track = gallery.querySelector(".pf-track");
-    const slides = gallery.querySelectorAll(".pf-slide");
+    const slides = [...gallery.querySelectorAll(".pf-slide")];
     const dotsContainer = gallery.querySelector(".pf-dots");
     const view = gallery.querySelector(".pf-view");
     const prevButton = gallery.querySelector(".pf-prev");
@@ -56,73 +56,68 @@ document.addEventListener("DOMContentLoaded", () => {
       prevButton &&
       nextButton
     ) {
-      let currentIndex = 0;
+      let index = 0;
+      let timer;
       let touchStartX = null;
-      let autoPlay;
 
-      // Nuqtalarni yaratish
-      slides.forEach((slide, index) => {
+      dotsContainer.innerHTML = "";
+
+      slides.forEach((_, i) => {
         const dot = document.createElement("button");
 
         dot.type = "button";
         dot.className = "pf-dot";
-        dot.setAttribute("aria-label", `${index + 1}-rasm`);
+        dot.setAttribute("aria-label", `${i + 1}-rasm`);
 
         dot.addEventListener("click", () => {
-          goToSlide(index);
+          showSlide(i);
         });
 
         dotsContainer.appendChild(dot);
       });
 
-      const dots = dotsContainer.querySelectorAll(".pf-dot");
+      const dots = [...dotsContainer.querySelectorAll(".pf-dot")];
 
-      // Karuselni boshqarish
-      function goToSlide(index) {
-        currentIndex = (index + slides.length) % slides.length;
-
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        slides.forEach((slide, slideIndex) => {
-          slide.classList.toggle("on", slideIndex === currentIndex);
-          dots[slideIndex].classList.toggle(
-            "on",
-            slideIndex === currentIndex
-          );
-        });
-
-        startAutoPlay();
+      function stopTimer() {
+        clearInterval(timer);
       }
 
-      // Avtomatik aylantirish
-      function stopAutoPlay() {
-        clearInterval(autoPlay);
-      }
+      function startTimer() {
+        stopTimer();
 
-      function startAutoPlay() {
-        stopAutoPlay();
-
-        autoPlay = setInterval(() => {
-          goToSlide(currentIndex + 1);
+        timer = setInterval(() => {
+          showSlide(index + 1);
         }, 6000);
       }
 
+      function showSlide(newIndex) {
+        index = (newIndex + slides.length) % slides.length;
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("on", i === index);
+          dots[i].classList.toggle("on", i === index);
+        });
+
+        startTimer();
+      }
+
       prevButton.addEventListener("click", () => {
-        goToSlide(currentIndex - 1);
+        showSlide(index - 1);
       });
 
       nextButton.addEventListener("click", () => {
-        goToSlide(currentIndex + 1);
+        showSlide(index + 1);
       });
 
-      // Telefon ekranida surish
       view.addEventListener(
         "touchstart",
         (event) => {
           touchStartX = event.touches[0].clientX;
-          stopAutoPlay();
+          stopTimer();
         },
-        { passive: true }
+        { passive: true },
       );
 
       view.addEventListener(
@@ -130,25 +125,23 @@ document.addEventListener("DOMContentLoaded", () => {
         (event) => {
           if (touchStartX === null) return;
 
-          const touchEndX = event.changedTouches[0].clientX;
-          const difference = touchEndX - touchStartX;
+          const difference = event.changedTouches[0].clientX - touchStartX;
 
           if (Math.abs(difference) > 40) {
-            goToSlide(currentIndex + (difference < 0 ? 1 : -1));
+            showSlide(index + (difference < 0 ? 1 : -1));
           } else {
-            startAutoPlay();
+            startTimer();
           }
 
           touchStartX = null;
         },
-        { passive: true }
+        { passive: true },
       );
 
-      // Sichqoncha bilan ustiga kelganda to'xtatish
-      gallery.addEventListener("mouseenter", stopAutoPlay);
-      gallery.addEventListener("mouseleave", startAutoPlay);
+      gallery.addEventListener("mouseenter", stopTimer);
+      gallery.addEventListener("mouseleave", startTimer);
 
-      goToSlide(0);
+      showSlide(0);
     }
   }
 
@@ -157,59 +150,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const gxTrack = document.querySelector("#gxTrack");
 
   if (gxTrack) {
-    const gxSlides = [...gxTrack.querySelectorAll(".gx__slide")];
-    const gxPrev = document.querySelector("#gxPrev");
-    const gxNext = document.querySelector("#gxNext");
-    const gxDots = document.querySelector("#gxDots");
-    const gxCurrent = document.querySelector("#gxCurrent");
-    const gxTotal = document.querySelector("#gxTotal");
+    const slides = [...gxTrack.querySelectorAll(".gx__slide")];
+    const prevButton = document.querySelector("#gxPrev");
+    const nextButton = document.querySelector("#gxNext");
+    const dotsContainer = document.querySelector("#gxDots");
+    const currentCounter = document.querySelector("#gxCurrent");
+    const totalCounter = document.querySelector("#gxTotal");
 
-    if (
-      gxSlides.length > 0 &&
-      gxPrev &&
-      gxNext &&
-      gxDots
-    ) {
-      let currentIndex = 0;
-      let autoPlay;
-      let scrollTimeout;
+    if (slides.length > 0 && prevButton && nextButton && dotsContainer) {
+      let index = 0;
+      let scrollTimer;
 
-      // Jami slaydlar soni
-      if (gxTotal) {
-        gxTotal.textContent = String(gxSlides.length).padStart(2, "0");
+      dotsContainer.innerHTML = "";
+
+      if (totalCounter) {
+        totalCounter.textContent = String(slides.length).padStart(2, "0");
       }
 
       // Nuqtalarni yaratish
-      gxSlides.forEach((slide, index) => {
+      slides.forEach((_, i) => {
         const dot = document.createElement("button");
 
         dot.type = "button";
         dot.className = "gx__dot";
-        dot.setAttribute("aria-label", `${index + 1}-rasm`);
+        dot.setAttribute("aria-label", `${i + 1}-rasm`);
 
         dot.addEventListener("click", () => {
-          goToSlide(index);
+          goToSlide(i);
         });
 
-        gxDots.appendChild(dot);
+        dotsContainer.appendChild(dot);
       });
 
-      const dots = [...gxDots.querySelectorAll(".gx__dot")];
+      const dots = [...dotsContainer.querySelectorAll(".gx__dot")];
 
       // Raqamlar va nuqtalarni yangilash
-      function updateCarousel() {
-        if (gxCurrent) {
-          gxCurrent.textContent = String(currentIndex + 1).padStart(
-            2,
-            "0"
-          );
+      function updateControls() {
+        if (currentCounter) {
+          currentCounter.textContent = String(index + 1).padStart(2, "0");
         }
 
-        dots.forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentIndex);
-          dot.classList.toggle("on", index === currentIndex);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+          dot.classList.toggle("on", i === index);
 
-          if (index === currentIndex) {
+          if (i === index) {
             dot.setAttribute("aria-current", "true");
           } else {
             dot.removeAttribute("aria-current");
@@ -217,96 +202,72 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // Kerakli slaydga o'tish
-      function goToSlide(index) {
-        currentIndex =
-          (index + gxSlides.length) % gxSlides.length;
+      // Faqat karuselni surish, butun sahifani emas
+      function goToSlide(newIndex) {
+        index = (newIndex + slides.length) % slides.length;
 
-        gxSlides[currentIndex].scrollIntoView({
+        const trackRect = gxTrack.getBoundingClientRect();
+        const slideRect = slides[index].getBoundingClientRect();
+
+        const targetLeft = gxTrack.scrollLeft + slideRect.left - trackRect.left;
+
+        gxTrack.scrollTo({
+          left: targetLeft,
           behavior: "smooth",
-          block: "nearest",
-          inline: "start",
         });
 
-        updateCarousel();
-        startAutoPlay();
+        updateControls();
       }
 
-      // Avtomatik aylantirish
-      function stopAutoPlay() {
-        clearInterval(autoPlay);
-      }
-
-      function startAutoPlay() {
-        stopAutoPlay();
-
-        autoPlay = setInterval(() => {
-          goToSlide(currentIndex + 1);
-        }, 4000);
-      }
-
-      // Oldingi va keyingi tugmalar
-      gxPrev.addEventListener("click", () => {
-        goToSlide(currentIndex - 1);
+      prevButton.addEventListener("click", () => {
+        goToSlide(index - 1);
       });
 
-      gxNext.addEventListener("click", () => {
-        goToSlide(currentIndex + 1);
+      nextButton.addEventListener("click", () => {
+        goToSlide(index + 1);
       });
 
-      // Klaviatura orqali boshqarish
+      // Klaviatura bilan boshqarish
       gxTrack.addEventListener("keydown", (event) => {
         if (event.key === "ArrowRight") {
-          goToSlide(currentIndex + 1);
+          event.preventDefault();
+          goToSlide(index + 1);
         }
 
         if (event.key === "ArrowLeft") {
-          goToSlide(currentIndex - 1);
+          event.preventDefault();
+          goToSlide(index - 1);
         }
       });
 
-      // Qo'lda surilganda raqamlarni yangilash
+      // Qo'lda surilganda raqam va nuqtalarni yangilash
       gxTrack.addEventListener("scroll", () => {
-        clearTimeout(scrollTimeout);
+        clearTimeout(scrollTimer);
 
-        scrollTimeout = setTimeout(() => {
-          const trackStart = gxTrack.getBoundingClientRect().left;
+        scrollTimer = setTimeout(() => {
+          const trackLeft = gxTrack.getBoundingClientRect().left;
 
           let closestIndex = 0;
           let closestDistance = Infinity;
 
-          gxSlides.forEach((slide, index) => {
+          slides.forEach((slide, i) => {
             const distance = Math.abs(
-              slide.getBoundingClientRect().left - trackStart
+              slide.getBoundingClientRect().left - trackLeft,
             );
 
             if (distance < closestDistance) {
               closestDistance = distance;
-              closestIndex = index;
+              closestIndex = i;
             }
           });
 
-          currentIndex = closestIndex;
-          updateCarousel();
+          index = closestIndex;
+          updateControls();
         }, 100);
       });
 
-      // Karusel ustiga kelganda avtomatik aylanishni to'xtatish
-      gxTrack.addEventListener("mouseenter", stopAutoPlay);
-      gxTrack.addEventListener("mouseleave", startAutoPlay);
-
-      // Telefonda surish
-      gxTrack.addEventListener("touchstart", stopAutoPlay, {
-        passive: true,
-      });
-
-      gxTrack.addEventListener("touchend", startAutoPlay, {
-        passive: true,
-      });
-
-      // Boshlang'ich holat
-      updateCarousel();
-      startAutoPlay();
+      // Dastlabki holat — avtomatik aylanish yo'q
+      updateControls();
     }
   }
 });

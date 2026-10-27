@@ -847,7 +847,6 @@ footer[id] {
   transform: scale(1.07);
 }
 
-
 .gx {
   --gx-gap: 24px;
   position: relative;
@@ -984,12 +983,8 @@ footer[id] {
   pointer-events: none;
   border: 1px solid transparent;
   border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    var(--cyan),
-    transparent 45%,
-    var(--pink)
-  ) border-box;
+  background: linear-gradient(135deg, var(--cyan), transparent 45%, var(--pink))
+    border-box;
   -webkit-mask:
     linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
@@ -1159,7 +1154,6 @@ footer[id] {
     transition: none;
   }
 }
-
 
 .fam__lead {
   margin: -16px 0 10px;
